@@ -1,0 +1,2 @@
+event=sony/hotkey SNY5001:00 
+action=/etc/acpi/actions/sony-laptop.sh %e
