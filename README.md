@@ -7,6 +7,6 @@ ACPI script for Sony VAIO S series that makes special keys useful on Linux.
 - VAIO button switches keyboard backlight mode
 - ASSIST button enabled fan force mode
 # INSTALLING
-- Install acpid (apt install acpid) 
-- (Optional) Install TLP (apt install tlp)
+- Install acpid - apt install acpid 
+- Install TLP - apt install tlp (Optional)
 - Place files into /etc/acpi/
