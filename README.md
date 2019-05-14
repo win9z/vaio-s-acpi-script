@@ -10,7 +10,7 @@ ACPI script for Sony VAIO S series that makes special keys useful on Linux.
 - Install acpid - apt install acpid 
 - Install TLP - apt install tlp (Optional)
 - Place files into /etc/acpi/
-- Restart pc
+- Restart laptop
 # TROUBLESHOOTING
 ### If after keypress nothing happens:
 Check daemon status - systemctl status acpid.service 
