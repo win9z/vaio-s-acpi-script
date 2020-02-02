@@ -18,19 +18,18 @@ notify() {
     done
 }
 
-# hadle the STAMINA/SPEED switch
+# handle the STAMINA/SPEED switch
 if [ $3 == "00000003" ] ; then
-
     if [ $4 == "00000000" ] ; then
         echo "performance" > /sys/devices/platform/sony-laptop/thermal_control
         tlp ac
         notify "SPEED mode"  
-               
     elif [ $4 == "00000001" ] ; then
         echo "silent" > /sys/devices/platform/sony-laptop/thermal_control  
         tlp bat 
         notify "STAMINA mode"              
     fi
+
 # handle other buttons
 elif [ $3 == "00000001" ] ; then
 
@@ -44,20 +43,17 @@ elif [ $3 == "00000001" ] ; then
     # decreases / increases keyboard backlight timeout
     
     if [ $4 == "00000014" ] || [ $4 == "00000015" ] ; then
-    
         if [ $4 == "00000014" ] ; then
-        
             if [ $kbtimeout == -1 ] ; then
                 kbtimeout= "1"
-            fi 
-                
+            fi
+			
             if [ $kbtimeout != 0 ] ; then
                 kbtimeout=$(($kbtimeout-1)) 
             fi
         fi
         
         if [ $4 == "00000015" ] ; then
-        
             if [ $kbtimeout == -1 ] ; then
                 kbtimeout= "1"
             fi 
