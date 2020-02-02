@@ -1,5 +1,5 @@
 # VAIO S ACPI script
-ACPI script for Sony VAIO S series that makes special keys useful on Linux.
+ACPI script for Sony VAIO S series that makes special keys work on Linux.
 # FEATURES
 - STAMINA / SPEED switches CPU and fan mode between silent and performance
 - FN+F1 disables / enables touchpad
