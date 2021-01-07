@@ -13,10 +13,11 @@ notify() {
             *" $USER") ;;
             "$USER "*) ;;
             *" $USER "*) ;;
-            *) SENT="$SENT $USER"; su $USER -c "notify-send \"$title\" \"$body\"" ;;
+            *) SENT="$SENT $USER"; DISPLAY=:0.0  su $USER -c "notify-send \"$title\" \"$body\"" ;;
         esac
     done
 }
+
 
 # handle the STAMINA/SPEED switch
 if [ $3 == "00000003" ] ; then
